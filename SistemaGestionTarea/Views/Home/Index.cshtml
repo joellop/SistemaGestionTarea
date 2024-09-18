@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html lang="es" ng-app="TareaApp">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="~/wwwroot/app/app.js"></script>
+    <script src="~/wwwroot/app/controllers/tareasController.js"></script>
+    <script src="~/wwwroot/app/services/tareasService.js"></script>
+    <link href="~/wwwroot/CSS/tarea.css" rel="stylesheet">
+</head>
+<body>
+    <div ng-view></div>
+    @Scripts.Render("https://code.jquery.com/jquery-3.5.1.slim.min.js")
+    @Scripts.Render("https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js")
+    @Scripts.Render("https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js")
+</body>
+</html>
