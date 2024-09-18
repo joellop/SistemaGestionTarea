@@ -3,6 +3,7 @@
     $scope.nuevaTarea = {};
     $scope.tareaActualizada = {};
     $scope.alert = null;
+    $scope.cargando = true;
 
     // Obtener el id de la tarea desde la URL (para edición)
     var tareaId = $routeParams.id;
@@ -17,9 +18,12 @@
 
     // Obtener todas las tareas
     $scope.cargarTareas = function () {
+        $scope.cargando = true;
         TareasService.getTareas().then(function (response) {
             $scope.tareas = response.data;
+            $scope.cargando = false;
         }, function (error) {
+            $scope.cargando = false;
             console.error('Error al obtener las tareas:', error);
         });
     };

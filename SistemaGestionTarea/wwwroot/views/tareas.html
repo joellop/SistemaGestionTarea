@@ -1,5 +1,7 @@
 ﻿<div class="container mt-4" ng-controller="TareasController">
+
     <div ng-if="alert" class="alert alert-{{alert.type}} mt-4 mb-4">{{alert.message}}</div>
+
     <h2 class="mb-4">Lista de Tareas</h2>
     <div class="list-group">
         <a href="#!/CrearLista" class="btn btn-primary mb-3">Crear nueva tarea</a>
@@ -17,6 +19,12 @@
                 </div>
             </li>
         </ul>
+    </div>
+    <!-- Spinner de Bootstrap -->
+    <div class="text-center">
+        <div ng-if="cargando" class="spinner-border text-primary" role="status">
+            <span class="sr-only">Cargando...</span>
+        </div>
     </div>
 
 </div>
